@@ -8,7 +8,7 @@ Projeto desenvolvido em Java + Spring Boot que consome a API pública da RAWG.io
 
 Buscar jogos por nome: GET/http://localhost:8000/games/buscar?nome=zelda
 
-Listar todos os jogos GET/ http://localhost:8000/games/todos
+Listar todos os jogos GET/ http://localhost:8000/games
 
 Listar os jogos favoritos GET http://localhost:8000/games/favoritos
 
@@ -73,7 +73,7 @@ name: nome do jogo released: data de lançamento metacritic: nota no Metacritic 
 
 Essa classe é usada internamente para interpretar a resposta da API e repassar os dados ao VideogameModel.
 
--GAMERESPONSE.JAVA:
+-GAMEENTRADA.JAVA:
 
 Classe que modela a resposta completa da RAWG API ao buscar por jogos. Contém:
 
@@ -89,7 +89,7 @@ name: nome da plataforma
 
 Faz parte da hierarquia usada para deserializar corretamente as plataformas dentro de cada jogo.
 
--PLATFORMWRAPPER.JAVA:
+-PLATFORMCAIXA.JAVA:
 
 Classe auxiliar usada para encapsular o objeto Platform dentro da estrutura da resposta da API. A RAWG API retorna plataformas em um formato aninhado como:
 
