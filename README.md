@@ -91,8 +91,17 @@ Faz parte da hierarquia usada para deserializar corretamente as plataformas dent
 
 -PLATFORMCAIXA.JAVA:
 
-Classe auxiliar usada para encapsular o objeto Platform dentro da estrutura da resposta da API. A RAWG API retorna plataformas em um formato aninhado como:
+Classe auxiliar usada para encapsular o objeto Platform dentro da estrutura da resposta da API.
+A RAWG API retorna plataformas em um formato aninhado como:
 
-{ "platforms": [ { "platform": { "name": "PC" } } ] }
+{
+  "platforms": [
+    {
+      "platform": {
+        "name": "PC"
+      }
+    }
+  ]
+}
 
-Portanto, o PlatformWrapper serve para mapear esse nível intermediário.
+Portanto, o PlatformCaixa serve para mapear esse nível intermediário.
